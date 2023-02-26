@@ -21,14 +21,10 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate{
         stopButton.isEnabled = false
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
+
     
     @IBAction func recordButtonAction(_ sender: Any) {
-        recordButton.isEnabled = false
-        stopButton.isEnabled = true
-        recordLabel.text = "Recording..."
+        configureUI(true)
         
         let dirPath = NSSearchPathForDirectoriesInDomains(.documentDirectory,.userDomainMask, true)[0] as String
                 let recordingName = "recordedVoice.wav"
@@ -47,9 +43,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate{
     }
     
     @IBAction func stopButtonAction(_ sender: Any) {
-        recordButton.isEnabled = true
-        stopButton.isEnabled = false
-        recordLabel.text = "Tap to Record!"
+        configureUI(false)
         
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
@@ -73,6 +67,21 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate{
             let recordedAudioURL = sender as! URL
             playSoundsVC.recordedAudioURL = recordedAudioURL
         }
+    }
+    
+    
+    func configureUI(_ isRecording:Bool){
+        if isRecording{
+            recordButton.isEnabled = false
+            stopButton.isEnabled = true
+            recordLabel.text = "Recording"
+        }
+        else{
+            recordButton.isEnabled = true
+            stopButton.isEnabled = false
+            recordLabel.text = "Tap to Record!"
+        }
+        
     }
     
     

@@ -16,22 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djY-ug-5oh" userLabel="recordAudioButton">
-                                <rect key="frame" x="107" y="326" width="179" height="169"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Record"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="djY-ug-5oh" userLabel="recordAudioButton">
+                                <rect key="frame" x="119" y="333" width="155" height="155"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="Record"/>
                                 <connections>
                                     <action selector="recordButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IaP-Dh-AYN"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap To Record!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RRt-qP-vy2" userLabel="recordAudioText">
-                                <rect key="frame" x="139.66666666666666" y="485.66666666666669" width="113.66666666666666" height="20.333333333333314"/>
+                                <rect key="frame" x="139.66666666666666" y="492.66666666666669" width="113.66666666666666" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="859-rI-9oT" userLabel="stopRecordButton">
-                                <rect key="frame" x="164.66666666666666" y="514" width="64" height="64"/>
+                                <rect key="frame" x="164.66666666666666" y="521" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="3GQ-CX-x9j"/>
                                     <constraint firstAttribute="height" constant="64" id="Lt6-d6-jrN"/>

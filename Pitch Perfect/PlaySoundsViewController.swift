@@ -41,7 +41,7 @@ class PlaySoundsViewController: UIViewController {
     @IBAction func playSound(_ sender: UIButton){
         
         switch(ButtonType(rawValue: sender.tag)!){
-        case .slow:
+    case .slow:
             playSound(rate:0.5)
         case .fast:
             playSound(rate:1.5)
@@ -63,14 +63,5 @@ class PlaySoundsViewController: UIViewController {
     }
     
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
